@@ -17,7 +17,7 @@ aws sso login --no-browser | fck-aws-sso --no-headless
 ### 3. Add to `.bashrc` or `.zshrc`
 
 ```
-BROWSER=true aws sso login | fck-aws-sso
+aws sso login --no-browser | fck-aws-sso
 ```
 
 ### 4. Forget that you ever had to login to AWS SSO manually.
