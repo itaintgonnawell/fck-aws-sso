@@ -37,17 +37,17 @@ def authorize_sso(url, code, headless=True, user_data_dir=None):
 
         logging.debug("Waiting for the allow page to load")
         login_button = WebDriverWait(driver, 1000).until(
-            EC.element_to_be_clickable((By.CSS_SELECTOR, ".awsui_button_vjswe_1nbam_105.awsui_variant-primary_vjswe_1nbam_248"))
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "button[data-testid='allow-access-button']"))
         )
         
         logging.debug("Clicking on the allow button")
         login_button.click()
 
         logging.debug("Waiting for the confirmation page to load")
+
+        xpath_expression = "//*[text()='You can close this window.' or text()='이 창을 닫을 수 있습니다.']"
         WebDriverWait(driver, 1000).until(
-            EC.text_to_be_present_in_element(
-                (By.TAG_NAME, "body"), "You can close this window."
-            )
+            EC.presence_of_element_located((By.XPATH, xpath_expression))
         )
         logging.debug("Done")
 

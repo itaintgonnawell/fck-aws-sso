@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fck-aws-sso"
-version = "0.2.5"
+version = "0.2.6"
 description = "A tool to automate AWS SSO login"
 authors = ["Oskar Korczak <oskar.korczak@protonmail.com>"]
 readme = "README.md"

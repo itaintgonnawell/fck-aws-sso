@@ -8,10 +8,10 @@ pipx install fck-aws-sso
 
 ### 2. Run first time with `--no-headless`
 
-You need that to save your browser user data. `BROWSER=true` is hack so aws sso won't open browser. Browser will be opened by `fck-aws-sso`.
+You need that to save your browser user data. `--no-browser` is hack so aws sso won't open browser. Browser will be opened by `fck-aws-sso`.
 
 ```
-BROWSER=true aws sso login | fck-aws-sso --no-headless
+aws sso login --no-browser | fck-aws-sso --no-headless
 ```
 
 ### 3. Add to `.bashrc` or `.zshrc`

@@ -16,7 +16,7 @@ def main(
 ):
     """
     A tool to automate AWS SSO login.
-    Example: BROWSER=true aws sso login | fck-aws-sso
+    Example: aws sso login --no-browser | fck-aws-sso
     """
     if verbose:
         logging.basicConfig(level=logging.DEBUG)

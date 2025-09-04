@@ -16,7 +16,7 @@ def extract_data(pattern, line):
 def read_stdin_until_data_is_extracted():
     logging.debug("Reading stdin until data is extracted")
 
-    url_pattern = r"https://[a-zA-Z0-9./_-]+"
+    url_pattern = r"https://[#a-zA-Z0-9./_-]+"
     code_pattern = r"\b[A-Z0-9]{4}-[A-Z0-9]{4}\b"
 
     url = code = None
